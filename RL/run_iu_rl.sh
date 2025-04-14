@@ -1,0 +1,18 @@
+CUDA_VISIBLE_DEVICES=1 nohup python train_rl.py>/public/home/huarong/yixiulong/RM/Train/RL-AAGT/results/IU-X-Ray/Reward/B4-M-R-717-RFL/B4-M-R-717-RFL-AAGT.out \
+    --image_dir data/iu_xray/images/ \
+    --ann_path data/iu_xray/annotation.json \
+    --dataset_name iu_xray \
+    --max_seq_length 60 \
+    --threshold 3 \
+    --batch_size 8 \
+    --epochs 100 \
+    --save_dir  /public/home/huarong/yixiulong/RM/Train/RL-AAGT/results/IU-X-Ray/Reward/B4-M-R-717-RFL \
+    --step_size 1 \
+    --gamma 0.8 \
+    --seed 17194 \
+    --beam_size 3 \
+    --log_period 100 \
+    --early_stop 100 \
+    --d_vf 2048 \
+    --n_gpu 1 \
+    --resume /public/home/huarong/yixiulong/RM/R2Gen-AAGT/results/IU-X-Ray/Resnet_101/model_best.pth
